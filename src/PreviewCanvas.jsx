@@ -321,7 +321,7 @@ export default function PreviewCanvas({ config, exportRef }) {
               <h1 className="text-7xl font-bold leading-tighter tracking-tight mb-8" style={textStyle}>
                 {title}
               </h1>
-              <div className="w-24 h-2 mb-8" style={{ backgroundColor: accentColor }} />
+              <div className="w-24 h-2 mb-8" style={{ backgroundColor: textColor }} />
               <p className="text-3xl font-light opacity-80 leading-relaxed max-w-3xl" style={textStyle}>
                 {description}
               </p>
