@@ -11,7 +11,7 @@ A tool/library for generating Open Graph metadata for web pages and applications
 - **Extensible:** Add additional meta tags as needed.
 
 ## SCREENSHOT
-![OpenGraph Generator Preview](https://i.ibb.co/39BRzYrm/blob.png)
+![OpenGraph Generator Preview](https://i.ibb.co/9396N9DQ/og-4.png)
 
 ## Configuration
 
