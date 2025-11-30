@@ -62,7 +62,7 @@ export const CodeBlock = ({ label, code }) => (
       <button 
         onClick={() => {
           navigator.clipboard.writeText(code);
-          alert('Copied to clipboard!');
+          console.log('Copied to clipboard!');
         }}
         className="text-slate-400 hover:text-white transition-colors"
         title="Copy"

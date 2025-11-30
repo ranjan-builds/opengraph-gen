@@ -130,7 +130,7 @@ const PreviewCanvas = ({ config, previewScale, exportRef, containerRef }) => {
     const OutlineChip = ({ children, className = "" }) => (
       <span
         className={`border border-current rounded-full px-4 py-1.5 font-medium tracking-wide uppercase text-sm ${className}`}
-        style={{ borderColor: `${textColor}60` }}
+        style={{ borderColor: `${textColor}60`, color: textColor }}
       >
         {children}
       </span>
@@ -661,7 +661,12 @@ const PreviewCanvas = ({ config, previewScale, exportRef, containerRef }) => {
                     alt=""
                   />
                 ) : (
-                  <div className="w-10 h-10 bg-current rounded-full opacity-20" />
+                  <img
+                    src=".\fevicon.png"
+                    className="w-10 h-10 object-contain"
+                    crossOrigin="anonymous"
+                    alt=""
+                  />
                 )}
                 <span
                   className="text-2xl font-bold tracking-tight"
@@ -680,7 +685,7 @@ const PreviewCanvas = ({ config, previewScale, exportRef, containerRef }) => {
               </h1>
               <div
                 className="w-24 h-2 mb-8"
-                style={{ backgroundColor: accentColor }}
+                style={{ backgroundColor: textColor }}
               />
               <p
                 className="font-light opacity-80 leading-relaxed max-w-3xl"
@@ -691,7 +696,6 @@ const PreviewCanvas = ({ config, previewScale, exportRef, containerRef }) => {
             </div>
             <div className="flex justify-between items-center opacity-80">
               <OutlineChip>{author}</OutlineChip>
-              <OutlineChip>Read now</OutlineChip>
             </div>
           </Wrapper>
         );

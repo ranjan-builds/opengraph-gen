@@ -472,7 +472,7 @@ const Sidebar = ({
 
             {/* Palette */}
             <div className="space-y-3 border-t border-[#333] pt-6">
-              <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+              <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1 inline-block">
                 Palette
               </label>
               <div className="grid grid-cols-2 gap-4">
