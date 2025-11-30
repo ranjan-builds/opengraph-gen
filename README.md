@@ -1,6 +1,14 @@
 # OpenGraph Gen
 
-A tool/library for generating Open Graph metadata for web pages and applications. Open Graph metadata improves content sharing and link previews across social platforms such as Facebook, Twitter, and LinkedIn by providing structured information (e.g., title, description, image, URL) in your HTML.
+OpenGraph.gen is a modern OG image studio that lets you design beautiful 1200×630 social preview cards without opening Figma or Photoshop.
+Pick from multiple premium layouts (minimal, magazine, browser mock, code, quote, charts, and more) and fine-tune gradients, noise, grids, and typography in a live preview.
+Import content directly from any URL, auto-fill title/description/site name, or write your own copy from scratch.
+Upload your logo/cover image, tweak colors, add subtle texture and fade effects, and export crisp PNG/JPG/WebP in high resolution.
+Host the generated image in one click (ImgBB) and instantly copy ready-to-paste SEO, Open Graph, and Twitter Card meta tags.
+Perfect for developers, bloggers, SaaS founders, and marketers who want fast, consistent, on-brand social cards for every page.
+
+## SCREENSHOT
+![OpenGraph Generator Preview](https://i.ibb.co/9396N9DQ/og-4.png)
 
 ## Features
 
@@ -9,9 +17,6 @@ A tool/library for generating Open Graph metadata for web pages and applications
 - **Multi-platform Support:** Ensures compatibility with Facebook, Twitter Cards, LinkedIn, etc.
 - **Easy Integration:** Simple APIs for popular frameworks and static sites.
 - **Extensible:** Add additional meta tags as needed.
-
-## SCREENSHOT
-![OpenGraph Generator Preview](https://i.ibb.co/9396N9DQ/og-4.png)
 
 ## Configuration
 
