@@ -430,49 +430,55 @@ const PreviewCanvas = ({ config, previewScale, exportRef, containerRef }) => {
 
       case "vertical":
         return (
-          <Wrapper contentClassName="flex flex-col">
-            <div className="h-1/2 p-12 flex flex-col justify-center text-center items-center relative z-10">
+          <Wrapper contentClassName="flex flex-col h-full ">
+            {/* Top: Logo pill + big title */}
+            <div className=" py-12 flex flex-col justify-center items-center text-center relative z-10">
               <div
-                className="flex items-center gap-2 mb-4 opacity-70"
+                className="inline-flex items-center gap-2  px-6 py-2 rounded-full border border-white/40 bg-black/40 backdrop-blur-sm"
                 style={textStyle}
               >
                 {showLogo && (
-                  <div className="w-6 h-6 bg-current rounded-full opacity-50" />
+                  <div className="w-6 h-6 bg-current rounded-full opacity-60" />
                 )}
-                <span className="text-lg font-bold tracking-widest uppercase">
+                <span className="text-sm font-semibold tracking-[0.25em] uppercase">
                   {siteName}
                 </span>
               </div>
+
               <h1
-                className="font-black leading-tight"
+                className="font-black leading-tight max-w-5xl text-white"
                 style={{ ...textStyle, fontSize: titleSize }}
               >
                 {title}
               </h1>
             </div>
-            <div className="h-1/2 relative bg-black/20 overflow-hidden mx-12 mb-12 rounded-t-3xl shadow-2xl border-t border-l border-r border-white/20">
+
+            {/* Bottom: full-width dark image placeholder */}
+            <div className="flex-1 relative overflow-hidden flex items-center justify-center">
               {image ? (
                 <img
                   src={image}
-                  className="w-full h-full object-cover"
+                  className="
+    w-[90%] h-full object-cover object-top
+    rounded-t-3xl
+    border-[6px] border-black
+    outline outline-[2px] outline-white/20
+  "
                   crossOrigin="anonymous"
                   alt=""
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center bg-white/10">
+                <div className="w-full h-full flex items-center justify-center">
                   <p
-                    className="text-2xl opacity-40 font-bold"
+                    className="text-2xl opacity-40 font-bold text-white"
                     style={textStyle}
                   >
                     Image Preview
                   </p>
                 </div>
               )}
-              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-8">
-                <p className="text-white text-2xl font-medium text-center">
-                  {description}
-                </p>
-              </div>
+
+              {/* Bottom gradient + description text */}
             </div>
           </Wrapper>
         );
