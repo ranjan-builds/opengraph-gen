@@ -103,12 +103,26 @@ export default function App() {
 
     setIsUploading(true);
     try {
-      const blob = await window.htmlToImage.toBlob(exportRef.current, {
-        width: 1200,
-        height: 630,
+      // Generate image as JPEG data URL with compression quality
+      const dataUrl = await window.htmlToImage.toJpeg(exportRef.current, {
+        quality: 0.7, // 0.4 - 0.7 gives 150-350 KB typically
         pixelRatio: 2,
         style: { transform: "scale(1)", transformOrigin: "top left" },
+        width: 1200,
+        height: 630,
       });
+
+      // Convert DataURL → Blob
+      const blob = await (await fetch(dataUrl)).blob();
+      console.log("Image size:", (blob.size / 1024).toFixed(2), "KB");
+
+      // Check size before uploading
+      if (blob.size > 350 * 1024) {
+        alert(
+          `Image is ${(blob.size / 1024).toFixed(1)} KB. Try lowering quality.`
+        );
+        console.log("Current size:", blob.size / 1024, "KB");
+      }
 
       const formData = new FormData();
       formData.append("image", blob);
